@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=MuseoModerno:wght@700&display=swap');
+:root {
+    --main-color: black;
+    --accent-color: white;
+    font-family: 'MuseoModerno', cursive;
+     scroll-behavior: smooth; /*плавна прокрутка*/
+}
+
+body{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.header-logo {
+    margin: 16px 0;
+    font-family: 'Krona One', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding: 5px;
+    border: 1px solid transparent;
+}
+.header-menu li a:hover {
+    border: 1px solid var(--main-color);
+}
+
+@media (min-width: 650px) {
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+    .header-menu {
+        flex: 1;
+    }
+    .header-logo {
+        font-size: 3.5rem;
+}
+}
+.header-banner {
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-banner h1 {
+    color: var(--accent-color);
+}
+
+/* Controls */
+
+.button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.7s;
+    background-color: transparent;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card-button {
+    border-color: black;
+    color: black;
+}
+
+.card-button:hover {
+    background-color: black;
+    color: white;
+}
+.product-card img {
+    display: block;
+    width: 100%;
+}
+
+.product-card .product-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 500px) {
+
+    .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+}
+@media (min-width: 750px) {
+
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media (min-width: 980px) {
+
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
